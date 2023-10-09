@@ -1191,7 +1191,6 @@ extension NSAttributeType: CoreStoreDebugStringConvertible {
     public var coreStoreDumpString: String {
         
         switch self {
-            
         case .undefinedAttributeType:       return ".undefinedAttributeType"
         case .integer16AttributeType:       return ".integer16AttributeType"
         case .integer32AttributeType:       return ".integer32AttributeType"
@@ -1207,7 +1206,7 @@ extension NSAttributeType: CoreStoreDebugStringConvertible {
         case .objectIDAttributeType:        return ".objectIDAttributeType"
         case .UUIDAttributeType:            return ".UUIDAttributeType"
         case .URIAttributeType:             return ".URIAttributeType"
-        }
+        case .compositeAttributeType:       return ".compositeAttributeType"
     }
 }
 
