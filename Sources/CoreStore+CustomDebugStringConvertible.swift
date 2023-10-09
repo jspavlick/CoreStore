@@ -1088,17 +1088,17 @@ private func createFormattedString(_ firstLine: String, _ lastLine: String, _ in
 
 fileprivate extension String {
     
-    fileprivate static func indention(_ level: Int = 1) -> String {
+  static func indention(_ level: Int = 1) -> String {
         
         return String(repeating: " ", count: level * 4)
     }
     
-    fileprivate mutating func indent(_ level: Int) {
+  mutating func indent(_ level: Int) {
         
         self = self.replacingOccurrences(of: "\n", with: "\n\(String.indention(level))")
     }
     
-    fileprivate mutating func appendDumpInfo(_ key: String, _ value: Any) {
+  mutating func appendDumpInfo(_ key: String, _ value: Any) {
         
         self.append("\n.\(key) = \(formattedValue(value));")
     }
@@ -1190,7 +1190,7 @@ extension NSAttributeType: CoreStoreDebugStringConvertible {
     
     public var coreStoreDumpString: String {
         
-        switch self {
+      switch self {
         case .undefinedAttributeType:       return ".undefinedAttributeType"
         case .integer16AttributeType:       return ".integer16AttributeType"
         case .integer32AttributeType:       return ".integer32AttributeType"
@@ -1207,6 +1207,7 @@ extension NSAttributeType: CoreStoreDebugStringConvertible {
         case .UUIDAttributeType:            return ".UUIDAttributeType"
         case .URIAttributeType:             return ".URIAttributeType"
         case .compositeAttributeType:       return ".compositeAttributeType"
+        }
     }
 }
 
